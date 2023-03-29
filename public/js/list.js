@@ -2,8 +2,9 @@ $(document).ready(() => {
   $("#delete-product-btn").click(function (e) {
     e.preventDefault();
     var productsId = [];
+    const checkedBoxes = $("input:checkbox[name=deleteProduct]:checked");
 
-    $("input:checkbox[name=deleteProduct]:checked").each(function () {
+    checkedBoxes.each(function () {
       productsId.push($(this).val());
     });
 
@@ -15,40 +16,13 @@ $(document).ready(() => {
     const payload = JSON.stringify(productsId);
     $.post("/deleteproducts", payload, function (data, status) {})
       .done(function () {
-        $("input:checkbox[name=deleteProduct]:checked").each(function () {
-          $(this).hide();
+        checkedBoxes.each(function () {
+          $(this).parent().remove();
         });
-        location.reload();
+        //location.reload();
       })
       .fail(function () {
         $(".error-message").html("Error");
       });
   });
-
-  // $("#product_list").submit(function (e) {
-  //   e.preventDefault();
-  //   var productsId = [];
-
-  //   $("input:checkbox[name=deleteProduct]:checked").each(function () {
-  //     productsId.push($(this).val());
-  //   });
-
-  //   if (productsId.length === 0) {
-  //     $(".error-message").html("Please select at least one item to delete");
-  //     return;
-  //   }
-
-  //   const payload = JSON.stringify(productsId);
-  //   $.post("/deleteproducts", payload, function (data, status) {})
-  //     .done(function () {
-  //       $("input:checkbox[name=deleteProduct]:checked").each(function () {
-  //         console.log($(this));
-  //         $(this).hide();
-  //       });
-  //       //location.reload();
-  //     })
-  //     .fail(function () {
-  //       $(".error-message").html("Error");
-  //     });
-  // });
 });

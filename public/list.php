@@ -24,12 +24,12 @@ foreach ($productsAsArray as $product) {
 }
 
 ?>
-<form class="content" id='product_list' method='POST'>
+<div class="content" id='product_list'>
     <span class="error-message"></span>
 
     <?php foreach ($products as $product) { ?>
-        <input type="checkbox" name="deleteProduct" value="<?= $product->getId() ?>" class="delete-checkbox" />
         <div class="card">
+            <input type="checkbox" name="deleteProduct" value="<?= $product->getId() ?>" class="delete-checkbox" />
             <div class="card-content">
                 <h4 class="card-title"><?= $product->getSku() ?></h4>
                 <p class="card-text"><?= $product->getName() ?></p>
@@ -45,7 +45,7 @@ foreach ($productsAsArray as $product) {
         </div>
     <?php } ?>
 
-</form>
+</div>
 
 <?php
 include(__DIR__ . '/shared/footer.php');
