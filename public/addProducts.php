@@ -6,7 +6,7 @@
     <form id="product_form" method="POST">
         <div class="input_container">
             <label for="sku">SKU</label>
-            <input type="text" name="sku" id="sku" maxlength="9" placeholder="SKU123456" title="SKU" required />
+            <input type="text" name="sku" id="sku" maxlength="10" placeholder="SKU1234567" title="SKU" required />
         </div>
 
         <div class="input_container">

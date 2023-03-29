@@ -53,5 +53,4 @@ include(__DIR__ . '/shared/footer.php');
 <script src='../js/list.js'></script>
 </body>
 
-
 </html>
