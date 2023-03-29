@@ -3,45 +3,45 @@
   box-sizing: border-box;
 }
 
-.main {
+body {
   padding: 5rem;
 }
-.main header {
+body header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
   border-bottom: 1px solid black;
 }
-.main header .button-container {
+body header .button-container {
   display: flex;
   gap: 1rem;
 }
-.main header .button-container button {
+body header .button-container button {
   box-shadow: 2px 2px 2px black;
 }
-.main header .button-container button a {
+body header .button-container button a {
   text-decoration: none;
   color: black;
 }
-.main .content {
+body .content {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   padding: 1rem;
   margin-bottom: 1rem;
 }
-.main .content .card {
+body .content .card {
   padding: 1rem;
   display: flex;
   flex-direction: column;
   border: 1px solid black;
   width: 15rem;
 }
-.main .content .card input {
+body .content .card input {
   margin-right: auto;
 }
-.main .content .card .card-content {
+body .content .card .card-content {
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -49,36 +49,36 @@
   justify-content: center;
   align-items: center;
 }
-.main .content .card .card-content p {
+body .content .card .card-content p {
   text-align: center;
 }
-.main .content .error-message {
+body .content .error-message {
   margin-left: 1rem;
   width: 100%;
   color: red;
 }
-.main #product_form {
+body #product_form {
   padding: 2rem;
   display: flex;
   flex-direction: column;
 }
-.main #product_form .input_container {
+body #product_form .input_container {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 1rem;
 }
-.main #product_form .input_container label {
+body #product_form .input_container label {
   width: 8rem;
 }
-.main #product_form .attribute-description {
+body #product_form .attribute-description {
   display: flex;
   width: 100%;
   margin-top: 1rem;
 }
-.main #product_form .error-message {
+body #product_form .error-message {
   color: red;
 }
-.main footer {
+body footer {
   display: flex;
   align-items: center;
   justify-content: center;

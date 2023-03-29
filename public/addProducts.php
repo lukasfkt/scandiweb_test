@@ -1,4 +1,3 @@
-<body class="main">
     <?php
 
     $title = 'Product Add';
@@ -63,7 +62,7 @@
     <?php
     include(__DIR__ . '/shared/footer.php');
     ?>
-</body>
-<script src='../js/add.js'></script>
+    <script src='../js/add.js'></script>
+    </body>
 
-</html>
+    </html>
