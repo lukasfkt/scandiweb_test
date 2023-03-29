@@ -1,5 +1,5 @@
 $(document).ready(() => {
-  $("#product_list").submit(function (e) {
+  $("#delete-product-btn").click(function (e) {
     e.preventDefault();
     var productsId = [];
 
@@ -16,7 +16,7 @@ $(document).ready(() => {
     $.post("/deleteproducts", payload, function (data, status) {})
       .done(function () {
         $("input:checkbox[name=deleteProduct]:checked").each(function () {
-          $(this).parent().hide();
+          $(this).parent().remove();
         });
       })
       .fail(function () {
