@@ -16,7 +16,7 @@ $(document).ready(() => {
     $.post("/deleteproducts", payload, function (data, status) {})
       .done(function () {
         $("input:checkbox[name=deleteProduct]:checked").each(function () {
-          $(this).parent().hide();
+          $(this).parent().remove();
         });
       })
       .fail(function () {

@@ -1,4 +1,4 @@
-<section class="main">
+<body class="main">
     <?php
 
     use ScandiwebApp\classes\Book;
@@ -25,7 +25,6 @@
     }
 
     ?>
-
     <form class="content" id='product_list' method='POST'>
         <span class="error-message"></span>
 
@@ -52,7 +51,7 @@
     <?php
     include(__DIR__ . '/shared/footer.php');
     ?>
-</section>
+</body>
 <script src='../js/list.js'></script>
 
 </html>
