@@ -46,8 +46,8 @@
                 <input type="number" name="width" id="width" placeholder="0" title="Width" step="1" />
             </span>
             <span class="input_container">
-                <label for="lenght">Length (CM)</label>
-                <input type="number" name="lenght" id="lenght" placeholder="0" title="Length" step="1" />
+                <label for="length">Length (CM)</label>
+                <input type="number" name="length" id="length" placeholder="0" title="Length" step="1" />
             </span>
             <span>Please, provide dimensions</span>
         </div>

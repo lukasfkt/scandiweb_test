@@ -15,7 +15,7 @@ class Furniture extends Product
         $this->sku = $args['sku'];
         $this->name = $args['name'];
         $this->price = floatval($args['price']);
-        isset($args['dimensions']) ? $this->dimensions = $args['dimensions'] : $this->dimensions = $args['height'] . 'x' . $args['width'] . 'x' . $args['lenght'];
+        isset($args['dimensions']) ? $this->dimensions = $args['dimensions'] : $this->dimensions = $args['height'] . 'x' . $args['width'] . 'x' . $args['length'];
     }
 
     // Getters and Setters

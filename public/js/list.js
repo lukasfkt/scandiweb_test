@@ -15,7 +15,9 @@ $(document).ready(() => {
     const payload = JSON.stringify(productsId);
     $.post("/deleteproducts", payload, function (data, status) {})
       .done(function () {
-        document.location.href = "/";
+        $("input:checkbox[name=deleteProduct]:checked").each(function () {
+          $(this).parent().hide();
+        });
       })
       .fail(function () {
         $(".error-message").html("Error");

@@ -5,7 +5,7 @@ const BOOK = $(".book_container");
 const SIZE = $("#size");
 const HEIGHT = $("#height");
 const WIDTH = $("#width");
-const LENGHT = $("#lenght");
+const LENGTH = $("#length");
 const WEIGHT = $("#weight");
 
 $(document).ready(() => {
@@ -24,7 +24,7 @@ $(document).ready(() => {
     SIZE.val("");
     HEIGHT.val("");
     WIDTH.val("");
-    LENGHT.val("");
+    LENGTH.val("");
     WEIGHT.val("");
 
     switch (valueSelected) {
@@ -36,7 +36,7 @@ $(document).ready(() => {
         SIZE.prop("required", true);
         HEIGHT.prop("required", false);
         WIDTH.prop("required", false);
-        LENGHT.prop("required", false);
+        LENGTH.prop("required", false);
         WEIGHT.prop("required", false);
         break;
 
@@ -48,7 +48,7 @@ $(document).ready(() => {
         SIZE.prop("required", false);
         HEIGHT.prop("required", false);
         WIDTH.prop("required", false);
-        LENGHT.prop("required", false);
+        LENGTH.prop("required", false);
         WEIGHT.prop("required", true);
         break;
 
@@ -60,7 +60,7 @@ $(document).ready(() => {
         SIZE.prop("required", false);
         HEIGHT.prop("required", true);
         WIDTH.prop("required", true);
-        LENGHT.prop("required", true);
+        LENGTH.prop("required", true);
         WEIGHT.prop("required", false);
         break;
 
@@ -71,7 +71,7 @@ $(document).ready(() => {
         SIZE.prop("required", false);
         HEIGHT.prop("required", false);
         WIDTH.prop("required", false);
-        LENGHT.prop("required", false);
+        LENGTH.prop("required", false);
         WEIGHT.prop("required", false);
         break;
     }

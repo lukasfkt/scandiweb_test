@@ -39,7 +39,7 @@ class ProductController
                 }
                 break;
             case 'furniture':
-                if (!$payload['height'] || !$payload['width'] || !$payload['lenght']) {
+                if (!$payload['height'] || !$payload['width'] || !$payload['length']) {
                     http_response_code(403);
                     exit();
                 }
