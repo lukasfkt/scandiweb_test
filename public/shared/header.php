@@ -16,7 +16,7 @@
     <div class="button-container">
       <?php if ($title === 'Product List') { ?>
         <button><a href="add-product">ADD</a></button>
-        <button id="delete-product-btn" type="submit" form="product_list" value="MASS DELETE" name="MASS DELETE">MASS DELETE</button>
+        <button id="delete-product-btn" type="submit" form="product_list" name="delete">MASS DELETE</button>
       <?php } ?>
 
       <?php if ($title === 'Product Add') { ?>
