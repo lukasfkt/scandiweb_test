@@ -16,7 +16,7 @@ $(document).ready(() => {
     $.post("/deleteproducts", payload, function (data, status) {})
       .done(function () {
         $("input:checkbox[name=deleteProduct]:checked").each(function () {
-          $(this).parent().remove();
+          $(this).hide();
         });
         location.reload();
       })
@@ -25,29 +25,30 @@ $(document).ready(() => {
       });
   });
 
-  $("#product_list").submit(function (e) {
-    e.preventDefault();
-    var productsId = [];
+  // $("#product_list").submit(function (e) {
+  //   e.preventDefault();
+  //   var productsId = [];
 
-    $("input:checkbox[name=deleteProduct]:checked").each(function () {
-      productsId.push($(this).val());
-    });
+  //   $("input:checkbox[name=deleteProduct]:checked").each(function () {
+  //     productsId.push($(this).val());
+  //   });
 
-    if (productsId.length === 0) {
-      $(".error-message").html("Please select at least one item to delete");
-      return;
-    }
+  //   if (productsId.length === 0) {
+  //     $(".error-message").html("Please select at least one item to delete");
+  //     return;
+  //   }
 
-    const payload = JSON.stringify(productsId);
-    $.post("/deleteproducts", payload, function (data, status) {})
-      .done(function () {
-        $("input:checkbox[name=deleteProduct]:checked").each(function () {
-          $(this).parent().remove();
-        });
-        location.reload();
-      })
-      .fail(function () {
-        $(".error-message").html("Error");
-      });
-  });
+  //   const payload = JSON.stringify(productsId);
+  //   $.post("/deleteproducts", payload, function (data, status) {})
+  //     .done(function () {
+  //       $("input:checkbox[name=deleteProduct]:checked").each(function () {
+  //         console.log($(this));
+  //         $(this).hide();
+  //       });
+  //       //location.reload();
+  //     })
+  //     .fail(function () {
+  //       $(".error-message").html("Error");
+  //     });
+  // });
 });
